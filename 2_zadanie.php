@@ -11,15 +11,15 @@
 
 <body>
   <?
-  $mas = [
+  $colors = [
     'green', 'red', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'green', 'red', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'green', 'red', 'yellow'
 
   ];
   echo "<p id ='strup'>";
-  for ($i = 0; $i < count($mas); $i++) {
+  for ($i = 0; $i < count($colors); $i++) {
     echo "<i>";
     echo "<b>";
-    echo $mas[$i];
+    echo $colors[$i];
     echo "</b>";
     echo "</i>";
     echo " ";
@@ -35,7 +35,7 @@
       let rand = min + Math.random() * (max + 1 - min);
       return Math.floor(rand);
     }
-    let mas = [
+    let colors = [
       'green', 'red', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'green', 'red', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'yellow', 'gray', 'black', 'purple', 'pink', 'orange', 'green', 'red', 'yellow'
 
     ];
@@ -44,14 +44,14 @@
 
 
     $(document).ready(function() {
-      for (let j = 0; j < mas.length; j++) {
+      for (let j = 0; j < colors.length; j++) {
         let elem = $("i:eq(" + j + ")");
         elem.css('color', function() {
           let index;
           do {
-            index = randomInteger(0, (mas.length - 1));
-          } while (mas[index] === mas[j]); //alert(j); alert(index);
-          return mas[index];
+            index = randomInteger(0, (colors.length - 1));
+          } while (colors[index] === colors[j]); //alert(j); alert(index);
+          return colors[index];
 
 
         });
